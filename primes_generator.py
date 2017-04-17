@@ -12,10 +12,14 @@ def primes_generator(limit):
         while divisor < number:
             if number % divisor == 0:
                 is_prime = False
+                break
             divisor += 1
 
         if is_prime:
             results.append(number)
 
     return results
+
+
+
 
