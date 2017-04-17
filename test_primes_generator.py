@@ -7,6 +7,9 @@ class TestPrimesGenerator(unittest.TestCase):
     def test_primes_generator_function_receives_an_argument(self):
         primes_generator(5)
 
+    def test_primes_generator_raises_type_error_if_more_then_1_argument_is_passed(self):
+        self.assertRaises(TypeError, primes_generator, 5, 6)
+
     def test_primes_generator_raises_value_error_for_non_integer_argument(self):
         self.assertRaises(ValueError, primes_generator, [1, 2])
         self.assertRaises(ValueError, primes_generator, 'string')
