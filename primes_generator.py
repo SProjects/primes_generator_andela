@@ -1,3 +1,6 @@
 def primes_generator(limit):
-    pass
+    if not isinstance(limit, int):
+        raise ValueError('Limit values must be an integer')
+
+    
 
